@@ -137,7 +137,8 @@ def RocketNet(args, logger, pretrained=None, parameters=None):
     #     print(param_tensor, "\t", model.state_dict()[param_tensor].size())
     # assert 0
     if pretrained is not None:
-        model.load_state_dict(torch.load(pretrained, map_location='cuda'))
+        #model.load_state_dict(torch.load(pretrained, map_location='cuda'))
+        model.load_state_dict(torch.load(pretrained, map_location='cpu'))
     if parameters is not None:
         with open(parameters, 'rb') as f:
             parameters, f_mean, f_std = pkl.load(f)
