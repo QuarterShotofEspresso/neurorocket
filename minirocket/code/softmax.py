@@ -13,7 +13,8 @@ import torch, torch.nn as nn, torch.optim as optim
 from minirocket import fit, transform
 
 def train(path, num_classes, training_size, **kwargs):
-    torch.set_default_device("cuda:0")
+    # torch.set_default_device("cuda:0")
+    torch.set_default_device("cpu")
     # -- init ------------------------------------------------------------------
 
     # default hyperparameters are reusable for any dataset
@@ -201,7 +202,8 @@ def predict(path,
             f_mean,
             f_std,
             **kwargs):
-    torch.set_default_device("cuda:0")
+    # torch.set_default_device("cuda:0")
+    torch.set_default_device("cpu")
     args = \
     {
         "score"      : True,
