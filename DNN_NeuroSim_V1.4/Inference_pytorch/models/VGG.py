@@ -88,7 +88,9 @@ def vgg8( args, logger, pretrained=None):
     layers = make_layers(cfg, args, logger)
     model = VGG(args,layers, num_classes=10,logger = logger)
     if pretrained is not None:
-        model.load_state_dict(torch.load(pretrained))
+        device = torch.device('cpu')
+        model.load_state_dict(torch.load(pretrained, map_location=device))
+        model.to(device)
     return model
 
 
