@@ -1,5 +1,5 @@
 # NeuroRocket
-### Authors: Ratnodeep Bandyopadhyay and Shixun Wu
+> Authors: Ratnodeep Bandyopadhyay and Shixun Wu
 
 ### Docker Setup
 Install docker on your local machine.
