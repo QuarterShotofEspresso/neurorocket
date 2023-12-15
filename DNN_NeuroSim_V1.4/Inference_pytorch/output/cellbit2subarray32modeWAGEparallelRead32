@@ -1,0 +1,106 @@
+User assigned speed-up degree is larger than the upper bound (where no idle period during the whole process) 
+The speed-up degree is auto-assigned as the upper bound (where no idle period during the whole process) 
+------------------------------ FloorPlan --------------------------------
+
+Tile and PE size are optimized to maximize memory utilization ( = memory mapped by synapse / total memory on chip)
+
+Desired Conventional Mapped Tile Storage Size: 128x128
+Desired Conventional PE Storage Size: 64x64
+Desired Novel Mapped Tile Storage Size: 1x128x128
+User-defined SubArray Size: 32x128
+
+----------------- # of tile used for each layer -----------------
+layer1: 64
+
+----------------- Speed-up of each layer ------------------
+layer1: 1
+
+----------------- Utilization of each layer ------------------
+layer1: 0.625
+Memory Utilization of Whole Chip: 62.5 % 
+
+---------------------------- FloorPlan Done ------------------------------
+
+
+
+clkPeriod: 1.99983e-09
+-------------------------------------- Hardware Performance --------------------------------------
+-------------------- Estimation of Layer 1 ----------------------
+layer1's readLatency is: 760.56ns
+layer1's readDynamicEnergy is: 24360.8pJ
+layer1's leakagePower is: 3.43146uW
+layer1's leakageEnergy is: 2.60983pJ
+layer1's buffer latency is: 604.573ns
+layer1's buffer readDynamicEnergy is: 209.394pJ
+layer1's ic latency is: 17.9985ns
+layer1's ic readDynamicEnergy is: 785.529pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 127.989ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 7.99931ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 624.571ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 17390.2pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 4475.86pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 2494.75pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+------------------------------ Summary --------------------------------
+
+ChipArea : 2.21213e+06um^2
+Chip total CIM array : 142103um^2
+Total IC Area on chip (Global and Tile/PE local): 909259um^2
+Total ADC (or S/As and precharger for SRAM) Area on chip : 321934um^2
+Total Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) on chip : 446306um^2
+Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, pooling and activation units) : 308129um^2
+
+Chip clock period is: 1.99983ns
+Chip pipeline-system-clock-cycle (per image) is: 760.56ns
+Chip pipeline-system readDynamicEnergy (per image) is: 24360.8pJ
+Chip pipeline-system leakage Energy (per image) is: 2.60983pJ
+Chip pipeline-system leakage Power (per image) is: 3.43146uW
+Chip pipeline-system buffer readLatency (per image) is: 604.573ns
+Chip pipeline-system buffer readDynamicEnergy (per image) is: 209.394pJ
+Chip pipeline-system ic readLatency (per image) is: 17.9985ns
+Chip pipeline-system ic readDynamicEnergy (per image) is: 785.529pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+----------- ADC (or S/As and precharger for SRAM) readLatency is : 127.989ns
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readLatency is : 7.99931ns
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readLatency is : 624.571ns
+----------- ADC (or S/As and precharger for SRAM) readDynamicEnergy is : 17390.2pJ
+----------- Accumulation Circuits (subarray level: adders, shiftAdds; PE/Tile/Global level: accumulation units) readDynamicEnergy is : 4475.86pJ
+----------- Other Peripheries (e.g. decoders, mux, switchmatrix, buffers, IC, pooling and activation units) readDynamicEnergy is : 2494.75pJ
+
+************************ Breakdown of Latency and Dynamic Energy *************************
+
+
+----------------------------- Performance -------------------------------
+Energy Efficiency TOPS/W (Pipelined Process): 5.51217
+Throughput TOPS (Pipelined Process): 0.21542
+Throughput FPS (Pipelined Process): 1.31482e+06
+Compute efficiency TOPS/mm^2 (Pipelined Process): 0.0973814
+-------------------------------------- Hardware Performance Done --------------------------------------
+
+------------------------------ Simulation Performance --------------------------------
+Total Run-time of NeuroSim: 1 seconds
+------------------------------ Simulation Performance --------------------------------
+/home/neurorocket/Inference_pytorch/log/default/ADCprecision=5/batch_size=200/cellBit=2/dataset=InsectSound/decreasing_lr=140,180/detect=0/grad_scale=8/inference=1/lr=0.01/mode=WAGE/model=Rocket/onoffratio=10/parallelRead=32/seed=117/subArray=32/t=0/target=0/v=0/vari=0.0/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+fan_in   8192, float_limit 0.019137, float std 0.015625, quant limit 0.9921875, scale 32.0
+Chunk = 1...                                                                    quantize layer  FC0_
+Chunk = 2...                                                                    Chunk = 3...                                                                    Chunk = 4...                                                                    Chunk = 5...                                                                    Chunk = 6...                                                                    Chunk = 7...                                                                     --- Hardware Properties --- 
+subArray size: 
+32
+parallel read: 
+32
+ADC precision: 
+5
+cell precision: 
+2
+on/off ratio: 
+10
+variation: 
+0.0
+25000
