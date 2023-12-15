@@ -1,6 +1,8 @@
 # NeuroRocket
 > Authors: Ratnodeep Bandyopadhyay and Shixun Wu
 
+### Please visit the sister repository for additional information: https://github.com/shixun404/CS220_Project/tree/master
+
 ### Docker Setup
 Install docker on your local machine.
 
